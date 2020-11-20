@@ -283,6 +283,7 @@ return [
         Webkul\BookingProduct\Providers\BookingProductServiceProvider::class,
         Webkul\SocialLogin\Providers\SocialLoginServiceProvider::class,
         Webkul\SAASCustomizer\Providers\SAASCustomizerServiceProvider::class,
+        // EDES\SaasAdmin\Providers\SaasAdminServiceProvider::class
     ],
 
     /*

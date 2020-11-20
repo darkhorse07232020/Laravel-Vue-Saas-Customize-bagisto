@@ -25,7 +25,7 @@ return [
         ],
     ],
 
-    'admin-default' => 'default',
+    'admin-default' => 'theme1',
 
     'admin-themes' => [
         'default' => [
@@ -33,10 +33,10 @@ return [
             'assets_path' => 'public/admin-themes/default/assets',
             'name' => 'Default'
         ],
-        'multi-local' => [
-            'views_path' => 'resources/admin-themes/default/views',
-            'assets_path' => 'public/admin-themes/default/assets',
-            'name' => 'Default'
+        'theme1' => [
+            'views_path' => 'resources/admin-themes/theme1/views',
+            'assets_path' => 'public/admin-themes/theme1/assets',
+            'name' => 'Theme 1'
         ]
     ]
 ];

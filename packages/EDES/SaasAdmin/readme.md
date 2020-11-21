@@ -15,7 +15,7 @@ EDES\SaasAdmin\Providers\SaasAdminServiceProvider::class
 #### Goto composer.json file and add following line under 'psr-4':
 
 ~~~
-"Webkul\\SAASCustomizer\\": "packages/EDES/SaasAdmin/src"
+"EDES\\SaasAdmin\\": "packages/EDES/SaasAdmin/src"
 ~~~
 
 

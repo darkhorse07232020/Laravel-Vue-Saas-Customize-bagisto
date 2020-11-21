@@ -1,6 +1,5 @@
 <script type="text/x-template" id="export-form-template">
-    <form method="POST" action="{{ route('admin.datagrid.export', ['locale' => request()->get('locale')]) }}" @submit.prevent="onSubmit">
-
+    <form method="POST" action="{{ route('admin.datagrid.export', ['admin-locale' => request()->get('admin-locale')]) }}" @submit.prevent="onSubmit">
         <div class="page-content">
             <div class="form-container">
                 @csrf()

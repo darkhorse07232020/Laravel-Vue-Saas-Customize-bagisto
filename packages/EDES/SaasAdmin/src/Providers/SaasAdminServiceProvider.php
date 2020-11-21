@@ -4,6 +4,8 @@ namespace EDES\SaasAdmin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Routing\Router;
+use EDES\SaasAdmin\Http\Middleware\Locale;
 
 class SaasAdminServiceProvider extends ServiceProvider
 {
@@ -12,7 +14,7 @@ class SaasAdminServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
 
@@ -31,6 +33,8 @@ class SaasAdminServiceProvider extends ServiceProvider
         Event::listen('bagisto.admin.layout.head', function($viewRenderEventManager) {
             $viewRenderEventManager->addTemplate('saasadmin::admin.layouts.style');
         });
+
+        $router->aliasMiddleware('admin-locale', Locale::class);
     }
 
     /**
@@ -40,7 +44,7 @@ class SaasAdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerConfig();
+        //$this->registerConfig();
     }
 
     /**

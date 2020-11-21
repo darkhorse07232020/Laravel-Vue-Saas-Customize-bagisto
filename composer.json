@@ -109,7 +109,8 @@
         "Webkul\\Velocity\\": "packages/Webkul/Velocity/src",
         "Webkul\\BookingProduct\\": "packages/Webkul/BookingProduct/src",
         "Webkul\\SocialLogin\\": "packages/Webkul/SocialLogin/src",
-        "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src"
+        "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
+        "EDES\\SaasAdmin\\": "packages/EDES/SaasAdmin/src"
       }
     },
 

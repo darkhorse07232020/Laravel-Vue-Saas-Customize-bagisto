@@ -49,7 +49,7 @@
 
                 {!! view_render_event('bagisto.admin.layout.content.before') !!}
 
-                {{-- @yield('content-wrapper') --}}
+                @yield('content-wrapper')
 
                 {!! view_render_event('bagisto.admin.layout.content.after') !!}
 

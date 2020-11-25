@@ -1,3 +1,29 @@
+{{--@php--}}
+{{--    $searchQuery = request()->input();--}}
+
+{{--    if ($searchQuery && ! empty($searchQuery)) {--}}
+{{--        $searchQuery = implode('&', array_map(--}}
+{{--            function ($v, $k) {--}}
+{{--                if (is_array($v)) {--}}
+{{--                    if (is_array($v)) {--}}
+{{--                        $key = array_keys($v)[0];--}}
+
+{{--                        return $k. "[$key]=" . implode('&' . $k . '[]=', $v);--}}
+{{--                    } else {--}}
+{{--                        return $k. '[]=' . implode('&' . $k . '[]=', $v);--}}
+{{--                    }--}}
+{{--                } else {--}}
+{{--                    return $k . '=' . $v;--}}
+{{--                }--}}
+{{--            },--}}
+{{--            $searchQuery,--}}
+{{--            array_keys($searchQuery)--}}
+{{--        ));--}}
+{{--    } else {--}}
+{{--        $searchQuery = false;--}}
+{{--    }--}}
+{{--@endphp--}}
+
 <div class="navbar-top">
     <div class="navbar-top-left">
         <div class="brand-logo">

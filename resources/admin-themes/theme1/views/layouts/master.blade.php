@@ -16,6 +16,24 @@
         <link rel="stylesheet" href="{{ asset('vendor/webkul/ui/assets/css/ui.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/webkul/admin/assets/css/admin.css') }}">
 
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Page Vendors Styles(used by this page)-->
+		<link href="{{ bagisto_asset('plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors Styles-->
+		<!--begin::Global Theme Styles(used by all pages)-->
+		<link href="{{ bagisto_asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ bagisto_asset('plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ bagisto_asset('css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Global Theme Styles-->
+		<!--begin::Layout Themes(used by all pages)-->
+		<link href="{{ bagisto_asset('css/themes/layout/header/base/light.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ bagisto_asset('css/themes/layout/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ bagisto_asset('css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ bagisto_asset('css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
+
+
         @yield('head')
 
         @yield('css')
@@ -24,7 +42,7 @@
 
     </head>
 
-    <body @if (core()->getCurrentLocale() && core()->getCurrentLocale()->direction == 'rtl') class="rtl" @endif style="scroll-behavior: smooth;">
+    <body class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading" @if (core()->getCurrentLocale() && core()->getCurrentLocale()->direction == 'rtl') class="rtl" @endif style="scroll-behavior: smooth;">
         {!! view_render_event('bagisto.admin.layout.body.before') !!}
         <div id="app">
 
@@ -45,7 +63,7 @@
 
 
             <div class="content-container">
-
+                
                 {!! view_render_event('bagisto.admin.layout.content.before') !!}
 
                 @yield('content-wrapper')

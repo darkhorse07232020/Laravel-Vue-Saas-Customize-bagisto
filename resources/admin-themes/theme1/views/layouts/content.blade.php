@@ -5,7 +5,7 @@
     
         @include ('admin::layouts.nav-aside')
 
-        <div class="content-wrapper">
+        <div class="d-flex flex-column flex-row-fluid wrapper">
 
             @include ('admin::layouts.tabs')
 

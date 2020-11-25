@@ -41,13 +41,13 @@
         {!! view_render_event('bagisto.admin.layout.head') !!}
 
     </head>
-
-    <body @if (core()->getCurrentLocale() && core()->getCurrentLocale()->direction == 'rtl') class="rtl" @endif style="scroll-behavior: smooth;">
+    
+    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading" @if (core()->getCurrentLocale() && core()->getCurrentLocale()->direction == 'rtl') class="rtl" @endif style="scroll-behavior: smooth;">
         {!! view_render_event('bagisto.admin.layout.body.before') !!}
         <div id="app">
-
+            
             <flash-wrapper ref='flashes'></flash-wrapper>
-
+            
             {!! view_render_event('bagisto.admin.layout.nav-top.before') !!}
 
             @include ('admin::layouts.nav-top')
@@ -69,7 +69,6 @@
                 @yield('content-wrapper')
 
                 {!! view_render_event('bagisto.admin.layout.content.after') !!}
-
             </div>
 
         </div>
@@ -93,6 +92,18 @@
 
         <script type="text/javascript" src="{{ asset('vendor/webkul/admin/assets/js/admin.js') }}"></script>
         <script type="text/javascript" src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
+
+        <script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+        <script src="{{ bagisto_asset('plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{ bagisto_asset("plugins/custom/prismjs/prismjs.bundle.js")}}"></script>
+		<script src="{{ bagisto_asset('js/scripts.bundle.js')}}"></script>
+		<!--end::Global Theme Bundle-->
+		<!--begin::Page Vendors(used by this page)-->
+		<script src="{{ bagisto_asset('plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+		<!--end::Page Vendors-->
+		<!--begin::Page Scripts(used by this page)-->
+		<script src="{{ bagisto_asset('js/pages/widgets.js')}}"></script>
+
         <script type="text/javascript">
             window.addEventListener('DOMContentLoaded', function() {
                 moveDown = 60;
